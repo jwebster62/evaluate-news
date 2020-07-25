@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Test</title>
+    <title>Natural Language Processing</title>
 
+    <link href="main.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,15 +21,20 @@
 
     <main>
         <section>
-            <form class="" onsubmit="return Client.handleSubmit(event)">
-                <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+            <form id="main-form">
+                <div>
+                    <input id="url" type="text" placeholder="Enter URL here..." required>
+                    <span class="error hidden">
+                        Please enter a valid URL.
+                    </span>
+                </div>
+                <input type="Submit" name="" value="Submit">
             </form>
             <section>
 
                 <section>
-                    <strong>Form Results:</strong>
-                    <div id="results"></div>
+                    <strong id="res-head"></strong>
+                    <div id="res"></div>
                 </section>
     </main>
 
