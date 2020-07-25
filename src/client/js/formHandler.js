@@ -1,4 +1,8 @@
-function handleSubmit(event) {
+const apiURL = "https://api.meaningcloud.com/sentiment-2.1"
+const myKey = "a61e1677e6deb8dba178e66a9a9ae65b"
+
+
+/*function handleSubmit(event) {
     event.preventDefault()
 
     // check what text was put into the form field
@@ -14,3 +18,4 @@ function handleSubmit(event) {
 }
 
 export { handleSubmit }
+*/
