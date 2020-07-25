@@ -1,10 +1,3 @@
-import './styles/resets.scss'
-import './styles/base.scss'
-import './styles/footer.scss'
-import './styles/form.scss'
-import './styles/header.scss'
-
-
 var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
