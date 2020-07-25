@@ -1,4 +1,3 @@
-const apiURL = "https://api.meaningcloud.com/sentiment-2.1"
 const myKey = "a61e1677e6deb8dba178e66a9a9ae65b"
 
 
@@ -19,3 +18,32 @@ const myKey = "a61e1677e6deb8dba178e66a9a9ae65b"
 
 export { handleSubmit }
 */
+const https = require('follow-redirects').https;
+const fs = require('fs');
+
+const options = {
+    'method': 'POST',
+    'hostname': 'api.meaningcloud.com',
+    'path': `/sentiment-2.1?key=${myKey}&lang=<lang>&txt=<text>&model=<model>`,
+    'headers': {},
+    'maxRedirects': 20
+};
+
+const req = https.request(options, function(res) {
+    const chunks = [];
+
+    res.on("data", function(chunk) {
+        chunks.push(chunk);
+    });
+
+    res.on("end", function(chunk) {
+        var body = Buffer.concat(chunks);
+        console.log(body.toString());
+    });
+
+    res.on("error", function(error) {
+        console.error(error);
+    });
+});
+
+req.end();
